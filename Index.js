@@ -5,6 +5,10 @@ const cors = require("cors");
 
 const app = express();
 app.use(cors());
+app.get("/", (req, res) => {
+  res.send("Live Poll Backend Running 🚀");
+});
+
 
 const server = http.createServer(app);
 const io = new Server(server, {
